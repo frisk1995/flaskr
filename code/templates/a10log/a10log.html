@@ -23,10 +23,10 @@
                         <a class="nav-link" aria-current="page" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="/winlog">Windows</a>
+                        <a class="nav-link" href="/winlog">Windows</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/a10log">A10 thunder</a>
+                        <a class="nav-link active" href="/a10log">A10 thunder</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/proxysglog">ProxySG</a>
@@ -45,14 +45,14 @@
     <div class="border shadow p-3 mb-5 bg-body rounded" style="margin: 20px; background-color: rgb(233, 233, 233);">
         <div style="margin: 20px 10px 10px 20px">
             <font face="Verdana">
-                <h4>Upload Windows log file.</h4>
+                <h4>Upload A10 Thunder log file.</h4>
             </font>
         </div>
         <!-- ファイルアップロードボタン -->
         <div style="margin: 20px 10px 10px 20px; width: 50%">
             <div class="input-group mb-3">
                 <input type="file" class="form-control" id="select-file" />
-                <a href="/winlog_view" class="btn btn-outline-secondary">Load file</a>
+                <a href="/a10log_view" class="btn btn-outline-secondary">Load file</a>
             </div>
 
         </div>
@@ -68,7 +68,7 @@
                 // datafileというフィールド名でファイルを追加
                 formData.append("datafile", file);
                 // アップロード
-                fetch("/upload_winlog", { method: "POST", body: formData });
+                fetch("/upload_a10log", { method: "POST", body: formData });
             }
             // ファイル選択時にhandleFileSelectを発火
             fileInput.addEventListener('change', handleFileSelect);

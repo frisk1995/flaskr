@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Windows Search Pages</title>
+    <title>Winlog Pages</title>
     <!-- BootstrapのCDNでのCSS読み込み -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -45,9 +45,6 @@
 
     <div class="border shadow p-3 mb-5 bg-body rounded" style="margin: 20px; background-color: rgb(233, 233, 233);">
         <!-- フィルタ機能ここから -->
-        <p style="padding-left: 5px">
-            検索結果 : {% print(tdl) %} 件
-        </p>
         <div class="row" style="padding: 5px;">
             <div class="col-md-4">
                 <div class="d-flex">
@@ -68,15 +65,16 @@
                 </div>
             </div>
         </div>
+        <!-- フィルタ機能ここまで -->
         <!-- ページネーション -->
         <div class="row" style="padding-left: 17px">
             <div class="pagination">
                 <div class="col">
                     {% if page > 1 %}
                     <div class="d-flex justify-content-start">
-                        <a href="/winlog_search?page=1&limit={{ limit }}&query={{ query }}"
+                        <a href="/winlog_view?page=1&limit={{ limit }}&query={{ query }}"
                             class="btn btn-info me-3">Page.1</a>
-                        <a href="/winlog_search?page={{ page - 1 }}&limit={{ limit }}&query={{ query }}"
+                        <a href="/winlog_view?page={{ page - 1 }}&limit={{ limit }}&query={{ query }}"
                             class="btn btn-outline-info">Prev</a>
                     </div>
 
@@ -90,9 +88,10 @@
 
                 <div class="col">
                     {% if tables|length == limit and page < total_pages %} <div class="d-flex justify-content-end">
-                        <a href="/winlog_search?page={{ page + 1 }}&limit={{ limit }}"
+                        <a href="/winlog_view?page={{ page + 1 }}&limit={{ limit }}&query={{ query }}"
                             class="btn btn-outline-danger me-3">Next</a>
-                        <a href="/winlog_search?page={{ total_pages }}&limit={{ limit }}" class="btn btn-danger">Page.{{
+                        <a href="/winlog_view?page={{ total_pages }}&limit={{ limit }}&query={{ query }}"
+                            class="btn btn-danger">Page.{{
                             total_pages }}</a>
                 </div>
 

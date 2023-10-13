@@ -1,6 +1,7 @@
 # This class Control Windows log database
 import sqlite3
 import time
+from config import global_value as glv
 
 
 class control_winlog_db():
@@ -10,7 +11,7 @@ class control_winlog_db():
     def init_db():
         # データベースを新規作成 or 読み込み
         con = sqlite3.connect(
-            "db/windowslog.db",
+            glv.WIN_DB_FILEPATH,
             isolation_level=None,
         )
         # テーブル初期化
@@ -37,8 +38,8 @@ class control_winlog_db():
         return con
 
     def open_log_file():
-        con = sqlite3.connect('/code/db/windowslog.db')
-        with open('/code/inputfile/winlog.csv') as f:
+        con = sqlite3.connect(glv.WIN_DB_FILEPATH)
+        with open(glv.WIN_CSV_FILEPATH) as f:
             flag = False  # 行中にダブルクォーテーションが含まれない
             num = 0  # ヘッダースキップ用関数
             for line in f:
@@ -82,7 +83,7 @@ class control_winlog_db():
 
     # DBをテーブル表示
     def result_db():
-        con = sqlite3.connect('/code/db/windowslog.db')
+        con = sqlite3.connect(glv.WIN_DB_FILEPATH)
         cur = con.cursor()
         sql = """
         SELECT * FROM WINLOG;
@@ -93,7 +94,7 @@ class control_winlog_db():
         return data
 
     def search_db(query, select_query):
-        con = sqlite3.connect('/code/db/windowslog.db')
+        con = sqlite3.connect(glv.WIN_DB_FILEPATH)
         cur = con.cursor()
         if select_query == "":
             sql = """

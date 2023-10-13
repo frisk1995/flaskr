@@ -76,6 +76,8 @@ def upload():
     return render_template('winlog.html')
 
 
+# 検索内容をセッションに格納してルーティング
+
 @app.route("/sample_view_search")
 def sample_view_search():
     query = request.args.get('query', '')  # リクエストパラメータから検索クエリを取得
