@@ -119,35 +119,35 @@ class control_a10log_db():
 # typeを取得する関数
     def getType(str):
         result = re.search(r'([^\[]+)', str)
-        value_type = result.group(1)if result else "NODATA"
+        value_type = result.group(1)if result else ""
         return value_type
 
 # Responseを取得する関数
     def getResponse(str):
         result = re.search(r'\[([^\]]+)\]', str)
-        response = result.group(1)if result else "NODATA"
+        response = result.group(1)if result else ""
         return response
 
 # FromAddressを取得する関数
     def getFromAdd(str):
         result = re.search(r'from (.*?),', str)
-        fromAdd = result.group(1) if result else "NODATA"
+        fromAdd = result.group(1) if result else ""
         return fromAdd
 
 # ToAddressを取得する関数
     def getToAdd(str):
         result = re.search(r'to (\S+)', str)
-        toAdd = result.group(1) if result else "NODATA"
+        toAdd = result.group(1) if result else ""
         return toAdd
 
 # ToDomainを取得する関数
     def getToDomain(str):
         result = re.search(r'\]:([^ ]+)', str)
-        toDomain = result.group(1) if result else "NODATA"
+        toDomain = result.group(1) if result else ""
         return toDomain
 
 # ToURLを取得する関数
     def getToUrl(str):
         result = re.search(r'url (\S+)', str)
-        toUrl = result.group(1) if result else "NODATA"
+        toUrl = result.group(1) if result else ""
         return toUrl
