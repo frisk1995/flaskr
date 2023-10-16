@@ -45,25 +45,45 @@
                 <input type="file" class="form-control" id="select-file" />
                 <a href="/a10log_view" class="btn btn-outline-secondary">Load file</a>
             </div>
-
+            <div class="progress mt-2">
+                <div id="progress-bar" class="progress-bar" style="width: 0;"></div>
+            </div>
         </div>
         <!-- InputタグでPOSTを実装-->
         <script>
-            // input要素
             const fileInput = document.getElementById('select-file');
-            // changeイベントで呼び出す関数
+            const progressBar = document.getElementById('progress-bar');
+
             const handleFileSelect = () => {
                 const file = fileInput.files[0];
-                // フォームデータを作成
                 const formData = new FormData();
-                // datafileというフィールド名でファイルを追加
                 formData.append("datafile", file);
-                // アップロード
-                fetch("/upload_a10log", { method: "POST", body: formData });
-            }
-            // ファイル選択時にhandleFileSelectを発火
-            fileInput.addEventListener('change', handleFileSelect);
 
+                const xhr = new XMLHttpRequest();
+                xhr.open("POST", "/upload_a10log", true);
+
+                // 監視する進捗イベント
+                xhr.upload.onprogress = (e) => {
+                    if (e.lengthComputable) {
+                        const percentComplete = (e.loaded / e.total) * 100;
+                        progressBar.style.width = percentComplete + "%";
+                    }
+                };
+
+                xhr.onload = () => {
+                    if (xhr.status === 200) {
+                        // アップロードが成功した場合の処理
+                        console.log("アップロード完了");
+                    } else {
+                        // アップロードが失敗した場合の処理
+                        console.error("アップロードエラー");
+                    }
+                };
+
+                xhr.send(formData);
+            };
+
+            fileInput.addEventListener('change', handleFileSelect);
         </script>
         <!-- ファイルアップロードボタン ここまで -->
     </div>
