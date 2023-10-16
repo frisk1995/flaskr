@@ -132,12 +132,18 @@ class control_a10log_db():
     def getFromAdd(str):
         result = re.search(r'from (.*?),', str)
         fromAdd = result.group(1) if result else ""
+        if fromAdd == "":
+            result = re.search(r'client (.*?),', str)
+            fromAdd = result.group(1) if result else ""
         return fromAdd
 
 # ToAddressを取得する関数
     def getToAdd(str):
         result = re.search(r'to (\S+)', str)
         toAdd = result.group(1) if result else ""
+        if toAdd == "":
+            result = re.search(r'server (.*?),', str)
+            toAdd = result.group(1) if result else ""
         return toAdd
 
 # ToDomainを取得する関数
