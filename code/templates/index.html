@@ -2,51 +2,78 @@
 <html lang="ja">
 
 <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bootstrap Sample</title>
-  <!-- BootstrapのCDNでのCSS読み込み -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-
-  <link href="/code/static/css/master_style.css" rel="stylesheet" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap Sample</title>
+    <!-- BootstrapのCDNでのCSS読み込み -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link href="css/master_style.css" rel="stylesheet" />
 </head>
 
 <body>
-     <!-- ヘッダーメニュー -->
-     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container-fluid">
-          <a class="navbar-brand" href="/">Dashboard</a>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="/">Home</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="/winlog">Windows</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="/a10log">A10 thunder</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="/proxysglog">ProxySG</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="/squidlog">squid</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="/otherlog">other</a>
-                  </li>
-              </ul>
-          </div>
-      </div>
-  </nav>
-  <!-- ヘッダーメニューここまで -->
-  <div class="container-fluid" style="padding: 20px;">
-  </div>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <!-- ヘッダーメニュー -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">Dashboard</a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/winlog">Windows</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/a10log">A10 thunder</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/manage">Manage</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- ヘッダーメニューここまで -->
+    <div class="container-fluid" style="padding: 20px;">
+        <div class="border shadow p-3 mb-5 bg-body rounded" style="margin: 20px; background-color: rgb(233, 233, 233);">
+            <div class="row">
+                <div class="col-sm-12 mb-3 mb-sm-0">
+                    <a href="/winlog" class="card mb-3" style="max-width: 100%;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="images/windows-logo.png" class="img-fluid rounded-start" alt="windows-logo" style="max-height: 150px;">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Windws LOG</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 mb-3 mb-sm-0">
+                    <a href="/a10log" class="card mb-3" style="max-width: 100%;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="images/a10-logo.png" class="img-fluid rounded-start" alt="a10-logo" style="max-height: 150px;">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">A10 LOG</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+                crossorigin="anonymous" />
 
 </body>
 

@@ -39,9 +39,9 @@ class control_a10log_db():
         con.close()
         return con
 
-    def open_log_file():
+    def open_log_file(filepath):
         con = sqlite3.connect(glv.A10_DB_FILEPATH)
-        with open(glv.A10_CSV_FILEPATH) as f:
+        with open(filepath) as f:
             flag = False  # 行中にダブルクォーテーションが含まれない
             for line in f:
                 arrData = []

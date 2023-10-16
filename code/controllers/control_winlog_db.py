@@ -37,9 +37,9 @@ class control_winlog_db():
         con.close()
         return con
 
-    def open_log_file():
+    def open_log_file(filepath):
         con = sqlite3.connect(glv.WIN_DB_FILEPATH)
-        with open(glv.WIN_CSV_FILEPATH) as f:
+        with open(filepath) as f:
             flag = False  # 行中にダブルクォーテーションが含まれない
             num = 0  # ヘッダースキップ用関数
             for line in f:

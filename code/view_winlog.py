@@ -55,11 +55,13 @@ def winlog_search():
 
 @view_winlog_module.route("/upload_winlog", methods=["POST"])
 def upload():
+
     ctlWinDB.init_db()
-    f = request.files["datafile"]
-    f.save(glv.WIN_CSV_FILEPATH)
+    file = request.files["datafile"]
+    filepath = glv.WIN_CSV_FILEPATH + file.filename
+    file.save(filepath)
     # ファイルアップロードしてDBを作成する関数の呼び出し
-    ctlWinDB.open_log_file()
+    ctlWinDB.open_log_file(filepath)
     return render_template('winlog/winlog.html')
 
 # 検索結果文字列を取得してセッションに格納する

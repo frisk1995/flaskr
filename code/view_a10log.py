@@ -56,10 +56,11 @@ def a10log_search():
 @view_a10log_module.route("/upload_a10log", methods=["POST"])
 def upload():
     ctlA10DB.init_db()
-    f = request.files["datafile"]
-    f.save(glv.A10_CSV_FILEPATH)
+    file = request.files["datafile"]
+    filepath = glv.A10_CSV_FILEPATH + file.filename
+    file.save(filepath)
     # ファイルアップロードしてDBを作成する関数の呼び出し
-    ctlA10DB.open_log_file()
+    ctlA10DB.open_log_file(filepath)
     return render_template('a10log/a10log.html')
 
 # 検索結果文字列を取得してセッションに格納する
@@ -72,3 +73,7 @@ def a10log_view_search():
     session["query"] = query
     session["select_query"] = select_query
     return redirect(url_for('view_a10log.a10log_search', query=query, select_query=select_query))
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
