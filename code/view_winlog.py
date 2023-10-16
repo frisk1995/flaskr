@@ -37,6 +37,7 @@ def getFilelist(target):
         tmp_array.append(file.split("/")[5])
         result.append(tmp_array)
     return result
+
 # 初回の結果表示用プログラム
 
 
@@ -89,3 +90,12 @@ def winlog_view_search():
     session["query"] = query
     session["select_query"] = select_query
     return redirect(url_for('view_winlog.winlog_search', query=query, select_query=select_query))
+
+
+@view_winlog_module.route("/winlog_open_file")
+def winlog_open_file():
+    ctlWinDB.init_db()
+    winlog_openfile = glv.WIN_CSV_FILEPATH+request.args.get('openfile', '')
+    flag = ctlWinDB.open_log_file(winlog_openfile)
+    print(winlog_openfile)
+    return redirect(url_for('view_winlog.winlog_view'))

@@ -1,4 +1,4 @@
-May 17 2023 00:00:00 Info        [ACOS]:Proxy [response-code 200] from XXX.XXX.XXX.XXX:XXXXX, to YYY.YYY.YYY.YYY in-bytes=9999
+May 17 2023 00:00:00 Info        [ACOS]:Proxy LOG1[response-code 200] from XXX.XXX.XXX.XXX:XXXXX, to YYY.YYY.YYY.YYY in-bytes=9999
 May 18 2023 01:00:00 Info        [ACOS]:Proxy CONNECT[internet- (client-ip-to-proxy priority#990)]:login.microsoftonline.com url login.microsoftonline.com:443 from XXX.XXX.XXX.XXX:XXXXX, snat SSS.SSS.SSS.SSS:ssss to YYY.YYY.YYY.YYY:yyyy out-bytes:XXX
 May 19 2023 02:00:00 Info        [ACOS]:Proxy POST[select-proxy- (client-ip-to-proxy priority#0)]:hogehoge.com url http://hogehoge.com/hogehoge from XXX.XXX.XXX.XXX:XXXXX, snat SSS.SSS.SSS.SSS:ssss to YYY.YYY.YYY.YYY:YYYY out-bytes:XXX
 May 20 2023 03:00:00 Info        [ACOS]:Proxy GET[select-proxy- (client-ip-to-proxy priority#0)]:hogehoge.com url /hogehoge.com/hogehoge from XXX.XXX.XXX.XXX:XXXXX, snat SSS.SSS.SSS.SSS:ssss to YYY.YYY.YYY.YYY:yyyy out-bytes:XXX

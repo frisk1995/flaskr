@@ -24,12 +24,12 @@ class control_winlog_db():
         sql = """
         CREATE TABLE IF NOT EXISTS WINLOG (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
-            level VARCHAR(256),
-            date VARCHAR(256),
-            source VARCHAR(256),
-            eventid INTEGER,
-            category VARCHAR(256),
-            data VARCHAR(256)
+            level TEXT,
+            date TEXT,
+            source TEXT,
+            eventid TEXT,
+            category TEXT,
+            data TEXT
         );
         """
         con.execute(sql)  # sql文を実行
