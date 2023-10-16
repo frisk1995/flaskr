@@ -39,6 +39,7 @@ class control_winlog_db():
 
     def open_log_file(filepath):
         con = sqlite3.connect(glv.WIN_DB_FILEPATH)
+        db_err_flag = ""
         with open(filepath) as f:
             flag = False  # 行中にダブルクォーテーションが含まれない
             num = 0  # ヘッダースキップ用関数
@@ -67,19 +68,24 @@ class control_winlog_db():
 
                 # 配列にデータがあれば処理する
                 if arrData != "" and num != 0:
-                    control_winlog_db.insert_log_data(arrData, con)
-
+                    db_err_flag = control_winlog_db.insert_log_data(arrData, con)
                 num = 1
-
         con.commit()
         con.close()
+        return db_err_flag
 
     # sqliteへのinsert処理
     def insert_log_data(log_data, con):
         cur = con.cursor()
+        flag = True
         # データベースにデータを挿入
         sql = 'INSERT INTO WINLOG (level, date, source, eventid, category, data) values (?,?,?,?,?,?)'
-        cur.execute(sql, log_data)
+        try:
+            cur.execute(sql, log_data)
+        except:
+            flag = False
+
+        return flag
 
     # DBをテーブル表示
     def result_db():

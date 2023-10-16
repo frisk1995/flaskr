@@ -61,17 +61,23 @@ class control_a10log_db():
                 arrData.append(value_toadd)
                 arrData.append(value_todomain)
                 arrData.append(value_toUrl)
-                control_a10log_db.insert_log_data(arrData, con)
+                db_err_flag = control_a10log_db.insert_log_data(arrData, con)
 
         con.commit()
         con.close()
+        return db_err_flag
 
     # sqliteへのinsert処理
     def insert_log_data(log_data, con):
         cur = con.cursor()
+        flag = True
         # データベースにデータを挿入
         sql = 'INSERT INTO a10log (date, type, response, from_add, to_add, to_domain, to_url) values (?,?,?,?,?,?,?)'
-        cur.execute(sql, log_data)
+        try:
+            cur.execute(sql, log_data)
+        except:
+            flag =  False
+        return flag
 
     # DBをテーブル表示
     def result_db():

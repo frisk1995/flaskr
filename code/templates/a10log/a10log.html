@@ -46,7 +46,9 @@
                 <a href="/a10log_view" class="btn btn-outline-secondary">Load file</a>
             </div>
             <div class="progress mt-2">
-                <div id="progress-bar" class="progress-bar" style="width: 0;"></div>
+                <div id="progress-bar" class="progress-bar" style="width: 0;">
+                    <span id="progress-text">0%</span>
+                </div>
             </div>
         </div>
         <!-- InputタグでPOSTを実装-->
@@ -54,7 +56,7 @@
             // ファイルアップロード用POSTとプログレスバーの表示
             const fileInput = document.getElementById('select-file');
             const progressBar = document.getElementById('progress-bar');
-
+            const progressText = document.getElementById('progress-text');
             const handleFileSelect = () => {
                 const file = fileInput.files[0];
                 const formData = new FormData();
@@ -64,10 +66,12 @@
                 xhr.open("POST", "/upload_a10log", true);
 
                 // 監視する進捗イベント
+                // 監視する進捗イベント
                 xhr.upload.onprogress = (e) => {
                     if (e.lengthComputable) {
                         const percentComplete = (e.loaded / e.total) * 100;
                         progressBar.style.width = percentComplete + "%";
+                        progressText.textContent = percentComplete.toFixed(2) + "%"; // 2桁の小数で表示
                     }
                 };
 
@@ -87,6 +91,22 @@
             fileInput.addEventListener('change', handleFileSelect);
         </script>
         <!-- ファイルアップロードボタン ここまで -->
+        <div style="margin: 20px 10px 10px 20px; ">
+            <div class="row">
+                {% for row in a10_file_list %}
+                <div class="col-sm-4 mb-3 mb-sm-0">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ row[1] }}</h5>
+                            <p class="card-text">File Timestamp: {{ row[0] }}
+                            </p>
+                            <a href="#" class="btn btn-primary">Open file</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
     </div>
 
 </body>

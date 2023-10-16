@@ -1,6 +1,9 @@
-from flask import Flask, render_template, request, redirect, url_for, session, Blueprint
+from flask import Flask, render_template, request, redirect, url_for, session, Blueprint, flash
 from controllers import control_winlog_db as cwd
 import sqlite3
+import os
+import datetime
+import glob
 from config import global_value as glv
 
 app = Flask(__name__)
@@ -18,9 +21,22 @@ ctlWinDB = cwd.control_winlog_db
 
 @view_winlog_module.route("/winlog")
 def winlog():
+    winlog_uploads_files = getFilelist("winlog")
     ctlWinDB.init_db()
-    return render_template('winlog/winlog.html')
+    return render_template('winlog/winlog.html', win_file_list=winlog_uploads_files)
 
+
+def getFilelist(target):
+    result = []
+    log_list = glob.glob(glv.UPLOADS_DIR+"/"+target+"/*")
+    for file in log_list:
+        tmp_array = []
+        file_timestamp = datetime.datetime.fromtimestamp(
+            os.path.getmtime(file))
+        tmp_array.append(file_timestamp.strftime('%Y/%m/%d-%H:%M:%S'))
+        tmp_array.append(file.split("/")[5])
+        result.append(tmp_array)
+    return result
 # 初回の結果表示用プログラム
 
 
@@ -55,13 +71,12 @@ def winlog_search():
 
 @view_winlog_module.route("/upload_winlog", methods=["POST"])
 def upload():
-
     ctlWinDB.init_db()
     file = request.files["datafile"]
     filepath = glv.WIN_CSV_FILEPATH + file.filename
     file.save(filepath)
     # ファイルアップロードしてDBを作成する関数の呼び出し
-    ctlWinDB.open_log_file(filepath)
+    flag = ctlWinDB.open_log_file(filepath)
     return render_template('winlog/winlog.html')
 
 # 検索結果文字列を取得してセッションに格納する

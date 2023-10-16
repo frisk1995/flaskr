@@ -1,6 +1,9 @@
-from flask import Flask, render_template, request, redirect, url_for, session, Blueprint
+from flask import Flask, render_template, request, redirect, url_for, session, Blueprint,flash
 from controllers import control_a10log_db as cwd
 import sqlite3
+import os
+import datetime
+import glob
 from config import global_value as glv
 
 app = Flask(__name__)
@@ -18,9 +21,21 @@ ctlA10DB = cwd.control_a10log_db
 
 @view_a10log_module.route("/a10log")
 def a10log():
+    a10log_uploads_files = getFilelist("a10log")
     ctlA10DB.init_db()
-    return render_template('a10log/a10log.html')
+    return render_template('a10log/a10log.html',a10_file_list = a10log_uploads_files)
 
+def getFilelist(target):
+    result = []
+    log_list = glob.glob(glv.UPLOADS_DIR+"/"+target+"/*")
+    for file in log_list:
+        tmp_array = []
+        file_timestamp = datetime.datetime.fromtimestamp(
+            os.path.getmtime(file))
+        tmp_array.append(file_timestamp.strftime('%Y/%m/%d-%H:%M:%S'))
+        tmp_array.append(file.split("/")[5])
+        result.append(tmp_array)
+    return result
 # 初回の結果表示用プログラム
 
 
@@ -60,7 +75,7 @@ def upload():
     filepath = glv.A10_CSV_FILEPATH + file.filename
     file.save(filepath)
     # ファイルアップロードしてDBを作成する関数の呼び出し
-    ctlA10DB.open_log_file(filepath)
+    flag = ctlA10DB.open_log_file(filepath)
     return render_template('a10log/a10log.html')
 
 # 検索結果文字列を取得してセッションに格納する
