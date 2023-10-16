@@ -142,7 +142,7 @@ class control_a10log_db():
         result = re.search(r'to (\S+)', str)
         toAdd = result.group(1) if result else ""
         if toAdd == "":
-            result = re.search(r'server (.*?),', str)
+            result = re.search(r'server (\S+)', str)
             toAdd = result.group(1) if result else ""
         return toAdd
 
