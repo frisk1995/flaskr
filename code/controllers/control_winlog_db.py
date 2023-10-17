@@ -2,7 +2,7 @@
 import sqlite3
 import time
 from config import global_value as glv
-
+import os
 
 class control_winlog_db():
     def __init__(self):
@@ -122,3 +122,8 @@ class control_winlog_db():
         data = cur.fetchall()
         con.close()
         return data
+
+
+# ファイルを削除する関数
+    def deleteFile(filepath):
+        os.remove(filepath)

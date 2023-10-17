@@ -99,3 +99,12 @@ def winlog_open_file():
     flag = ctlWinDB.open_log_file(winlog_openfile)
     print(winlog_openfile)
     return redirect(url_for('view_winlog.winlog_view'))
+
+
+@view_winlog_module.route("/winlog_delete_file")
+def winlog_delete_file():
+    ctlWinDB.init_db()
+    winlog_deletefile = glv.WIN_CSV_FILEPATH+request.args.get('deletefile', '')
+    flag = ctlWinDB.deleteFile(winlog_deletefile)
+    print(winlog_deletefile)
+    return redirect(url_for('view_winlog.winlog'))

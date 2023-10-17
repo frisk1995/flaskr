@@ -98,3 +98,12 @@ def a10log_open_file():
     flag = ctlA10DB.open_log_file(a10log_openfile)
     print(a10log_openfile)
     return redirect(url_for('view_a10log.a10log_view'))
+
+@view_a10log_module.route("/a10log_delete_file")
+def a10log_delete_file():
+    ctlA10DB.init_db()
+    a10log_deletefile = glv.A10_CSV_FILEPATH+request.args.get('deletefile', '')
+    flag = ctlA10DB.deleteFile(a10log_deletefile)
+    print(a10log_deletefile)
+    return redirect(url_for('view_a10log.a10log'))
+

@@ -3,6 +3,7 @@ import sqlite3
 import time
 from config import global_value as glv
 import re
+import os
 
 
 class control_a10log_db():
@@ -163,3 +164,7 @@ class control_a10log_db():
         result = re.search(r'url (\S+)', str)
         toUrl = result.group(1) if result else ""
         return toUrl
+
+# ファイルを削除する関数
+    def deleteFile(filepath):
+        os.remove(filepath)

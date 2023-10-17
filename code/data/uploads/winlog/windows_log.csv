@@ -1,5 +1,5 @@
 レベル,日付と時刻,ソース,イベント ID,タスクのカテゴリ,詳細
-警告,2023/06/13 17:20:46,log_1,1014,(1014),名前 t-ring-fallbacks2.msedge.net の名前解決は、構成されたどの DNS サーバーからも応答がなく、タイムアウトしました。
+警告,2023/06/13 17:20:46,Microsoft-Windows-DNS-Client,1014,(1014),名前 t-ring-fallbacks2.msedge.net の名前解決は、構成されたどの DNS サーバーからも応答がなく、タイムアウトしました。
 情報,2023/06/13 16:39:46,Microsoft-Windows-FilterManager,6,なし,ファイル システム フィルター 'EasyAntiCheatSys' (6.1、‎2023‎-‎05‎-‎23T21:13:48.000000000Z) が正常に読み込まれ、フィルター マネージャーに登録されました。
 情報,2023/06/13 16:39:42,Service Control Manager,7045,なし,"サービスがシステムにインストールされました。
 
@@ -162,3 +162,141 @@
  および APPID 
 {4839DDB7-58C2-48F5-8283-E1D1807D0D7D}
  の COM サーバー アプリケーションに対するローカルアクティブ化のアクセス許可を、アプリケーション コンテナー 利用不可 SID (利用不可) で実行中のアドレス LocalHost (LRPC 使用) のユーザー NT AUTHORITY\LOCAL SERVICE SID (S-1-5-19) に与えることはできません。このセキュリティ アクセス許可は、コンポーネント サービス管理ツールを使って変更できます。"
+情報,2023/06/12 8:29:31,Microsoft-Windows-Winlogon,7001,(1101),カスタマー エクスペリエンス向上プログラムのユーザー ログオン通知
+情報,2023/06/12 8:29:30,Microsoft-Windows-Kernel-Boot,32,(58),bootmgr はユーザー入力待ちで 0 ミリ秒を費やしました。
+情報,2023/06/12 8:29:30,Microsoft-Windows-Kernel-Boot,18,(57),このシステムには 0x1 ブート オプションがあります。
+情報,2023/06/12 8:29:30,Microsoft-Windows-Kernel-Boot,27,(33),ブートの種類は 0x1 でした。
+情報,2023/06/12 8:29:30,Microsoft-Windows-Kernel-Boot,25,(32),ブート メニュー ポリシーは 0x1 でした。
+情報,2023/06/12 8:29:30,Microsoft-Windows-Kernel-Boot,30,(21),ファームウェアからブート メトリックが報告されました。
+情報,2023/06/12 8:29:28,BTHUSB,18,なし,Bluetooth の認証コード (link keys) をローカル アダプター上に保管できません。スタートアップの間に Bluetooth キーボードは、システム BIOS で機能しない可能性があります。
+情報,2023/06/12 8:29:26,Microsoft-Windows-Kernel-General,1,(5),"システム時刻は ‎2023‎-‎06‎-‎11T15:23:07.809624100Z から ‎2023‎-‎06‎-‎11T23:29:26.500000000Z に変更されました。
+
+変更の理由: System time synchronized with the hardware clock。
+プロセス: '' (PID 4)。"
+情報,2023/06/12 0:23:07,Microsoft-Windows-Kernel-Power,107,(102),システムがスリープ状態から再開されました。
+警告,2023/06/12 0:23:05,BTHUSB,3,なし,アダプターに送信されたコマンドはタイムアウトになりました。アダプターは応答しませんでした。
+情報,2023/06/12 0:23:00,Microsoft-Windows-Kernel-Power,42,(64),"システムがスリープ状態になります。
+
+スリープの理由: Application API"
+情報,2023/06/12 0:22:58,Microsoft-Windows-Kernel-Power,187,(243),ユーザー モード プロセスは、SetSuspendState または SetSystemPowerState API を呼び出すことによってシステム状態の変更を試みました。
+情報,2023/06/12 0:22:57,Microsoft-Windows-Winlogon,7002,(1102),カスタマー エクスペリエンス向上プログラムのユーザー ログオフ通知
+情報,2023/06/12 0:22:20,Microsoft-Windows-FilterManager,1,なし,ファイル システム フィルター 'EasyAntiCheatSys' (バージョン 6.1、‎2023‎-‎05‎-‎23T21:13:48.000000000Z) は正常にアンロードされました。
+情報,2023/06/11 23:21:04,Microsoft-Windows-FilterManager,6,なし,ファイル システム フィルター 'EasyAntiCheatSys' (6.1、‎2023‎-‎05‎-‎23T21:13:48.000000000Z) が正常に読み込まれ、フィルター マネージャーに登録されました。
+情報,2023/06/11 23:20:59,Service Control Manager,7045,なし,"サービスがシステムにインストールされました。
+
+サービス名:  EasyAntiCheatSys
+サービス ファイル名:  C:\Program Files (x86)\EasyAntiCheat\EasyAntiCheat.sys
+サービスの種類:  カーネル モード ドライバー
+サービス開始の種類:  要求による開始
+サービス アカウント:  "
+警告,2023/06/11 23:20:52,Microsoft-Windows-DistributedCOM,10016,なし,"アプリケーション固有 のアクセス許可の設定では、CLSID 
+{2593F8B9-4EAF-457C-B68A-50F6B8EA6B54}
+ および APPID 
+{15C20B67-12E7-4BB6-92BB-7AFF07997402}
+ の COM サーバー アプリケーションに対するローカルアクティブ化のアクセス許可を、アプリケーション コンテナー 利用不可 SID (利用不可) で実行中のアドレス LocalHost (LRPC 使用) のユーザー Toshiki-PC\Toshiki SID (S-1-5-21-1375562583-1967171943-3024041195-1001) に与えることはできません。このセキュリティ アクセス許可は、コンポーネント サービス管理ツールを使って変更できます。"
+警告,2023/06/11 23:14:23,Microsoft-Windows-DistributedCOM,10016,なし,"アプリケーション固有 のアクセス許可の設定では、CLSID 
+{2593F8B9-4EAF-457C-B68A-50F6B8EA6B54}
+ および APPID 
+{15C20B67-12E7-4BB6-92BB-7AFF07997402}
+ の COM サーバー アプリケーションに対するローカルアクティブ化のアクセス許可を、アプリケーション コンテナー 利用不可 SID (利用不可) で実行中のアドレス LocalHost (LRPC 使用) のユーザー Toshiki-PC\Toshiki SID (S-1-5-21-1375562583-1967171943-3024041195-1001) に与えることはできません。このセキュリティ アクセス許可は、コンポーネント サービス管理ツールを使って変更できます。"
+情報,2023/06/11 23:13:54,Microsoft-Windows-Power-Troubleshooter,1,なし,"システムは低電力状態から再開しました。
+
+スリープ時間: ‎2023‎-‎06‎-‎11T00:16:06.993281700Z
+スリープ解除時間: ‎2023‎-‎06‎-‎11T14:13:52.415457500Z
+
+スリープ状態の解除元: 不明"
+警告,2023/06/11 23:13:54,Microsoft-Windows-DistributedCOM,10016,なし,"アプリケーション固有 のアクセス許可の設定では、CLSID 
+{6B3B8D23-FA8D-40B9-8DBD-B950333E2C52}
+ および APPID 
+{4839DDB7-58C2-48F5-8283-E1D1807D0D7D}
+ の COM サーバー アプリケーションに対するローカルアクティブ化のアクセス許可を、アプリケーション コンテナー 利用不可 SID (利用不可) で実行中のアドレス LocalHost (LRPC 使用) のユーザー NT AUTHORITY\LOCAL SERVICE SID (S-1-5-19) に与えることはできません。このセキュリティ アクセス許可は、コンポーネント サービス管理ツールを使って変更できます。"
+警告,2023/06/11 23:13:54,Microsoft-Windows-DistributedCOM,10016,なし,"アプリケーション固有 のアクセス許可の設定では、CLSID 
+{6B3B8D23-FA8D-40B9-8DBD-B950333E2C52}
+ および APPID 
+{4839DDB7-58C2-48F5-8283-E1D1807D0D7D}
+ の COM サーバー アプリケーションに対するローカルアクティブ化のアクセス許可を、アプリケーション コンテナー 利用不可 SID (利用不可) で実行中のアドレス LocalHost (LRPC 使用) のユーザー NT AUTHORITY\LOCAL SERVICE SID (S-1-5-19) に与えることはできません。このセキュリティ アクセス許可は、コンポーネント サービス管理ツールを使って変更できます。"
+情報,2023/06/11 23:13:53,Microsoft-Windows-Winlogon,7001,(1101),カスタマー エクスペリエンス向上プログラムのユーザー ログオン通知
+情報,2023/06/11 23:13:52,Microsoft-Windows-Kernel-Boot,32,(58),bootmgr はユーザー入力待ちで 0 ミリ秒を費やしました。
+情報,2023/06/11 23:13:52,Microsoft-Windows-Kernel-Boot,18,(57),このシステムには 0x1 ブート オプションがあります。
+情報,2023/06/11 23:13:52,Microsoft-Windows-Kernel-Boot,27,(33),ブートの種類は 0x1 でした。
+情報,2023/06/11 23:13:52,Microsoft-Windows-Kernel-Boot,25,(32),ブート メニュー ポリシーは 0x1 でした。
+情報,2023/06/11 23:13:52,Microsoft-Windows-Kernel-Boot,30,(21),ファームウェアからブート メトリックが報告されました。
+情報,2023/06/11 23:13:50,BTHUSB,18,なし,Bluetooth の認証コード (link keys) をローカル アダプター上に保管できません。スタートアップの間に Bluetooth キーボードは、システム BIOS で機能しない可能性があります。
+情報,2023/06/11 23:13:48,Microsoft-Windows-Kernel-General,1,(5),"システム時刻は ‎2023‎-‎06‎-‎11T00:16:18.195954000Z から ‎2023‎-‎06‎-‎11T14:13:48.500000000Z に変更されました。
+
+変更の理由: System time synchronized with the hardware clock。
+プロセス: '' (PID 4)。"
+情報,2023/06/11 9:16:18,Microsoft-Windows-Kernel-Power,107,(102),システムがスリープ状態から再開されました。
+情報,2023/06/11 23:13:48,EventLog,6013,なし,システムの稼働時間は 889141 秒です。
+警告,2023/06/11 9:16:15,BTHUSB,3,なし,アダプターに送信されたコマンドはタイムアウトになりました。アダプターは応答しませんでした。
+情報,2023/06/11 9:16:08,Microsoft-Windows-Kernel-Power,42,(64),"システムがスリープ状態になります。
+
+スリープの理由: Application API"
+情報,2023/06/11 9:16:07,Microsoft-Windows-Kernel-Power,187,(243),ユーザー モード プロセスは、SetSuspendState または SetSystemPowerState API を呼び出すことによってシステム状態の変更を試みました。
+情報,2023/06/11 9:16:04,Microsoft-Windows-Winlogon,7002,(1102),カスタマー エクスペリエンス向上プログラムのユーザー ログオフ通知
+情報,2023/06/11 9:14:17,Service Control Manager,7040,なし,Background Intelligent Transfer Service サービスの開始の種類は 自動的な開始 から 要求による開始 に変更されました。
+情報,2023/06/11 9:09:12,Service Control Manager,7040,なし,Background Intelligent Transfer Service サービスの開始の種類は 要求による開始 から 自動的な開始 に変更されました。
+警告,2023/06/11 8:12:15,Microsoft-Windows-DistributedCOM,10016,なし,"アプリケーション固有 のアクセス許可の設定では、CLSID 
+{2593F8B9-4EAF-457C-B68A-50F6B8EA6B54}
+ および APPID 
+{15C20B67-12E7-4BB6-92BB-7AFF07997402}
+ の COM サーバー アプリケーションに対するローカルアクティブ化のアクセス許可を、アプリケーション コンテナー 利用不可 SID (利用不可) で実行中のアドレス LocalHost (LRPC 使用) のユーザー Toshiki-PC\Toshiki SID (S-1-5-21-1375562583-1967171943-3024041195-1001) に与えることはできません。このセキュリティ アクセス許可は、コンポーネント サービス管理ツールを使って変更できます。"
+情報,2023/06/11 8:11:18,Service Control Manager,7040,なし,Background Intelligent Transfer Service サービスの開始の種類は 自動的な開始 から 要求による開始 に変更されました。
+情報,2023/06/11 8:08:53,Service Control Manager,7040,なし,Background Intelligent Transfer Service サービスの開始の種類は 要求による開始 から 自動的な開始 に変更されました。
+情報,2023/06/11 8:08:07,Service Control Manager,7040,なし,Background Intelligent Transfer Service サービスの開始の種類は 自動的な開始 から 要求による開始 に変更されました。
+情報,2023/06/11 8:06:34,Microsoft-Windows-WindowsUpdateClient,19,Windows Update エージェント,インストールの成功: 次の更新プログラムが正しくインストールされました: Microsoft Defender Antivirus のセキュリティ インテリジェンス更新プログラム - KB2267602 (バージョン 1.391.1067.0)
+情報,2023/06/11 8:06:33,Service Control Manager,7045,なし,"サービスがシステムにインストールされました。
+
+サービス名:  MpKslf5c86a82
+サービス ファイル名:  C:\ProgramData\Microsoft\Windows Defender\Definition Updates\{5CA86E43-5A24-4E39-8185-65EC86A3400A}\MpKslDrv.sys
+サービスの種類:  カーネル モード ドライバー
+サービス開始の種類:  要求による開始
+サービス アカウント:  "
+情報,2023/06/11 8:06:26,Microsoft-Windows-WindowsUpdateClient,43,Windows Update エージェント,インストールの開始: 次の更新プログラムのインストールが開始されました: Microsoft Defender Antivirus のセキュリティ インテリジェンス更新プログラム - KB2267602 (バージョン 1.391.1067.0)
+情報,2023/06/11 8:06:26,Microsoft-Windows-WindowsUpdateClient,44,Windows Update エージェント,Windows Update は更新プログラムのダウンロードを開始しました。
+警告,2023/06/11 8:06:17,Microsoft-Windows-DistributedCOM,10016,なし,"アプリケーション固有 のアクセス許可の設定では、CLSID 
+{2593F8B9-4EAF-457C-B68A-50F6B8EA6B54}
+ および APPID 
+{15C20B67-12E7-4BB6-92BB-7AFF07997402}
+ の COM サーバー アプリケーションに対するローカルアクティブ化のアクセス許可を、アプリケーション コンテナー 利用不可 SID (利用不可) で実行中のアドレス LocalHost (LRPC 使用) のユーザー Toshiki-PC\Toshiki SID (S-1-5-21-1375562583-1967171943-3024041195-1001) に与えることはできません。このセキュリティ アクセス許可は、コンポーネント サービス管理ツールを使って変更できます。"
+情報,2023/06/11 8:06:01,Service Control Manager,7040,なし,Background Intelligent Transfer Service サービスの開始の種類は 要求による開始 から 自動的な開始 に変更されました。
+情報,2023/06/11 8:05:59,Microsoft-Windows-Power-Troubleshooter,1,なし,"システムは低電力状態から再開しました。
+
+スリープ時間: ‎2023‎-‎06‎-‎09T11:32:45.509218500Z
+スリープ解除時間: ‎2023‎-‎06‎-‎10T23:05:57.923861000Z
+
+スリープ状態の解除元: 不明"
+警告,2023/06/11 8:05:59,Microsoft-Windows-DistributedCOM,10016,なし,"アプリケーション固有 のアクセス許可の設定では、CLSID 
+{6B3B8D23-FA8D-40B9-8DBD-B950333E2C52}
+ および APPID 
+{4839DDB7-58C2-48F5-8283-E1D1807D0D7D}
+ の COM サーバー アプリケーションに対するローカルアクティブ化のアクセス許可を、アプリケーション コンテナー 利用不可 SID (利用不可) で実行中のアドレス LocalHost (LRPC 使用) のユーザー NT AUTHORITY\LOCAL SERVICE SID (S-1-5-19) に与えることはできません。このセキュリティ アクセス許可は、コンポーネント サービス管理ツールを使って変更できます。"
+警告,2023/06/11 8:05:59,Microsoft-Windows-DistributedCOM,10016,なし,"アプリケーション固有 のアクセス許可の設定では、CLSID 
+{6B3B8D23-FA8D-40B9-8DBD-B950333E2C52}
+ および APPID 
+{4839DDB7-58C2-48F5-8283-E1D1807D0D7D}
+ の COM サーバー アプリケーションに対するローカルアクティブ化のアクセス許可を、アプリケーション コンテナー 利用不可 SID (利用不可) で実行中のアドレス LocalHost (LRPC 使用) のユーザー NT AUTHORITY\LOCAL SERVICE SID (S-1-5-19) に与えることはできません。このセキュリティ アクセス許可は、コンポーネント サービス管理ツールを使って変更できます。"
+情報,2023/06/11 8:05:58,Microsoft-Windows-Winlogon,7001,(1101),カスタマー エクスペリエンス向上プログラムのユーザー ログオン通知
+情報,2023/06/11 8:05:57,Microsoft-Windows-Kernel-Boot,32,(58),bootmgr はユーザー入力待ちで 0 ミリ秒を費やしました。
+情報,2023/06/11 8:05:57,Microsoft-Windows-Kernel-Boot,18,(57),このシステムには 0x1 ブート オプションがあります。
+情報,2023/06/11 8:05:57,Microsoft-Windows-Kernel-Boot,27,(33),ブートの種類は 0x1 でした。
+情報,2023/06/11 8:05:57,Microsoft-Windows-Kernel-Boot,25,(32),ブート メニュー ポリシーは 0x1 でした。
+情報,2023/06/11 8:05:57,Microsoft-Windows-Kernel-Boot,30,(21),ファームウェアからブート メトリックが報告されました。
+情報,2023/06/11 8:05:54,BTHUSB,18,なし,Bluetooth の認証コード (link keys) をローカル アダプター上に保管できません。スタートアップの間に Bluetooth キーボードは、システム BIOS で機能しない可能性があります。
+情報,2023/06/11 8:05:52,Microsoft-Windows-Kernel-General,1,(5),"システム時刻は ‎2023‎-‎06‎-‎09T11:32:54.504832000Z から ‎2023‎-‎06‎-‎10T23:05:52.500000000Z に変更されました。
+
+変更の理由: System time synchronized with the hardware clock。
+プロセス: '' (PID 4)。"
+情報,2023/06/09 20:32:54,Microsoft-Windows-Kernel-Power,107,(102),システムがスリープ状態から再開されました。
+情報,2023/06/11 8:05:52,EventLog,6013,なし,システムの稼働時間は 834665 秒です。
+警告,2023/06/09 20:32:52,BTHUSB,3,なし,アダプターに送信されたコマンドはタイムアウトになりました。アダプターは応答しませんでした。
+情報,2023/06/09 20:32:47,Microsoft-Windows-Kernel-Power,42,(64),"システムがスリープ状態になります。
+
+スリープの理由: Application API"
+情報,2023/06/09 20:32:45,Microsoft-Windows-Kernel-General,16,なし,ハイブ \??\C:\ProgramData\Microsoft\Provisioning\Microsoft-Desktop-Provisioning-Sequence.dat のアクセス履歴がクリアされました。これにより、0 のキーが更新され、0 の変更されたページが作成されました。
+情報,2023/06/09 20:32:45,Microsoft-Windows-Kernel-Power,187,(243),ユーザー モード プロセスは、SetSuspendState または SetSystemPowerState API を呼び出すことによってシステム状態の変更を試みました。
+情報,2023/06/09 20:32:43,Microsoft-Windows-Winlogon,7002,(1102),カスタマー エクスペリエンス向上プログラムのユーザー ログオフ通知
+情報,2023/06/09 19:19:10,Service Control Manager,7040,なし,Background Intelligent Transfer Service サービスの開始の種類は 自動的な開始 から 要求による開始 に変更されました。
+情報,2023/06/09 19:17:05,Service Control Manager,7040,なし,Background Intelligent Transfer Service サービスの開始の種類は 要求による開始 から 自動的な開始 に変更されました。
+情報,2023/06/09 19:17:05,Service Control Manager,7041,なし,Background Intelligent Transfer Service サービスの開始の種類は 要求による開始 から 自動的な開始 に変更されました。
+情報,2023/06/09 19:17:05,Service Control Manager,7041,なし,Background Intelligent Transfer Service サービスの開始の種類は 要求による開始 から 自動的な開始 に変更されました。

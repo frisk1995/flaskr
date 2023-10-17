@@ -104,7 +104,11 @@
                             <h5 class="card-title">{{ row[1] }}</h5>
                             <p class="card-text">File Timestamp: {{ row[0] }}
                             </p>
-                            <a href="/winlog_open_file?openfile={{ row[1] }}" class="btn btn-primary">Open file</a>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="/winlog_open_file?openfile={{ row[1] }}" class="btn btn-primary">Open</a>
+                                <a href="/winlog_delete_file?deletefile={{ row[1] }}"
+                                    class="btn btn-secondary btn-sm ml-auto">Delete</a>
+                            </div>
                         </div>
                     </div>
                 </div>

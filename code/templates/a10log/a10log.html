@@ -101,9 +101,12 @@
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">{{ row[1] }}</h5>
-                            <p class="card-text">File Timestamp: {{ row[0] }}
-                            </p>
-                            <a href="/a10log_open_file?openfile={{ row[1] }}" class="btn btn-primary">Open file</a>
+                            <p class="card-text">File Timestamp: {{ row[0] }}</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="/a10log_open_file?openfile={{ row[1] }}" class="btn btn-primary">Open</a>
+                                <a href="/a10log_delete_file?deletefile={{ row[1] }}"
+                                    class="btn btn-secondary btn-sm ml-auto">Delete</a>
+                            </div>
                         </div>
                     </div>
                 </div>
