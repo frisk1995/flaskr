@@ -23,7 +23,7 @@
                         <a class="nav-link" aria-current="page" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="/winlog">Windows</a>
+                        <a class="nav-link" href="/winlog">Windows</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/a10log">A10 thunder</a>
@@ -35,7 +35,7 @@
                         <a class="nav-link" href="/pxylog">Proxy</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/othlog">Other</a>
+                        <a class="nav-link active" href="/othlog">Other</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/manage">Manage</a>
@@ -48,14 +48,14 @@
     <div class="border shadow p-3 mb-5 bg-body rounded" style="margin: 20px; background-color: rgb(233, 233, 233);">
         <div style="margin: 20px 10px 10px 20px">
             <font face="Verdana">
-                <h4>Upload Windows log file.</h4>
+                <h4>Upload Other log file.</h4>
             </font>
         </div>
         <!-- ファイルアップロードボタン -->
         <div style="margin: 20px 10px 10px 20px; width: 50%">
             <div class="input-group mb-3">
                 <input type="file" class="form-control" id="select-file" />
-                <a href="/winlog_view" class="btn btn-outline-secondary">Load file</a>
+                <a href="/othlog_view" class="btn btn-outline-secondary">Load file</a>
             </div>
 
             <div class="progress mt-2">
@@ -75,7 +75,7 @@
                 formData.append("datafile", file);
 
                 const xhr = new XMLHttpRequest();
-                xhr.open("POST", "/upload_winlog", true);
+                xhr.open("POST", "/upload_othlog", true);
 
                 // 監視する進捗イベント
                 xhr.upload.onprogress = (e) => {
@@ -109,15 +109,15 @@
         <!-- 過去アップロードファイル一覧 -->
         <div style="margin: 20px 10px 10px 20px; ">
             <div class="row">
-                {% for row in win_file_list %}
+                {% for row in oth_file_list %}
                 <div class="col-sm-4 mb-3 mb-sm-0">
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">{{ row[1] }}</h5>
                             <small class="text-muted">Upload: {{ row[0] }}</small>
                             <div class="d-flex justify-content-between align-items-center">
-                                <a href="/winlog_open_file?openfile={{ row[1] }}" class="btn btn-primary">Open</a>
-                                <a href="/winlog_delete_file?deletefile={{ row[1] }}"
+                                <a href="/othlog_open_file?openfile={{ row[1] }}" class="btn btn-primary">Open</a>
+                                <a href="/othlog_delete_file?deletefile={{ row[1] }}"
                                     class="btn btn-secondary btn-sm ml-auto">Delete</a>
                             </div>
                         </div>

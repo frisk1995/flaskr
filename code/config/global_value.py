@@ -7,3 +7,6 @@ WIN_CSV_FILEPATH = "/code/data/uploads/winlog/"
 # A10 File Path
 A10_DB_FILEPATH = "/code/data/db/a10log/a10log.db"
 A10_CSV_FILEPATH = "/code/data/uploads/a10log/"
+# Other File Path
+OTH_DB_FILEPATH = "/code/data/db/othlog/othlog.db"
+OTH_CSV_FILEPATH = "/code/data/uploads/othlog/"
