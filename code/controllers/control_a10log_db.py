@@ -150,7 +150,7 @@ class control_a10log_db():
         toAdd = result.group(1) if result else ""
         if toAdd == "":
             result = re.search(r'server (\S+)', str)
-            toAdd = result.group(1) if result else ""
+            toAdd = result.group(1).replace(',','') if result else ""
         return toAdd
 
 # ToDomainを取得する関数
