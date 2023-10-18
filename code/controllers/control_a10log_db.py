@@ -147,7 +147,7 @@ class control_a10log_db():
 # ToAddressを取得する関数
     def getToAdd(str):
         result = re.search(r'to (\S+)', str)
-        toAdd = result.group(1) if result else ""
+        toAdd = result.group(1).replace(',','') if result else ""
         if toAdd == "":
             result = re.search(r'server (\S+)', str)
             toAdd = result.group(1).replace(',','') if result else ""
